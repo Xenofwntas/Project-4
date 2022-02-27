@@ -31,7 +31,7 @@ def index(request):
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, "network/inde.html", {
+    return render(request, "network/index.html", {
         "form" : newPost(),
         "posts" : posts,
         'page_obj': page_obj
@@ -51,7 +51,7 @@ def profile(request, user):
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, "network/profil.html", {
+    return render(request, "network/profile.html", {
         "posts" : posts,
         "profileUser" : user,
         "followersN" : followersN,

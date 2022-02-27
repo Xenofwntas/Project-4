@@ -36,14 +36,3 @@ class Post(models.Model):
     
     def __str__(self):
         return f"{self.creator} Wrote {self.body} on {self.created.strftime('%d/%m/%Y, %H:%M%p')} with {self.liked.count()} likes"
-
-'''
-class Followers(models.Model):
-    followed = models.ForeignKey(User, null=True, on_delete=CASCADE)
-    followers = models.ManyToManyField(User, null=True ,related_name="followedd")
-    followersNum = models.PositiveIntegerField(default=0)
-    followingNum = models.PositiveIntegerField(default=0)
-
-    def __str__(self):
-        return f"{self.followed} has {self.followers} Following: {self.followingNum} Being Followed: {self.followersNum}"
-        '''
